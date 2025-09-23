@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Manrope,
+  Open_Sans,
+  Poppins,
+} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const heading = Poppins({
+  variable: "--heading",
   subsets: ["latin"],
+  weight: ["500", "300", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const paragraph = Manrope({
+  variable: "--paragraph",
   subsets: ["latin"],
 });
 
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${heading.variable} ${paragraph.variable} antialiased w-screen min-h-screen relative`}
       >
         {children}
       </body>
