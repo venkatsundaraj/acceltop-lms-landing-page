@@ -8,10 +8,13 @@ import {
   emailValidator,
 } from "@/lib/validation/email-validation";
 import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
 
-interface WaitlistFormProps {}
+interface WaitlistFormProps {
+  className?: string;
+}
 
-const WaitlistForm: FC<WaitlistFormProps> = ({}) => {
+const WaitlistForm: FC<WaitlistFormProps> = ({ className }) => {
   const {
     register,
     formState: { isSubmitting, errors },
@@ -26,7 +29,10 @@ const WaitlistForm: FC<WaitlistFormProps> = ({}) => {
   return (
     <form
       onSubmit={handleSubmit(submitHandler)}
-      className="flex flex-col items-center justify-center gap-2"
+      className={cn(
+        "flex flex-col items-center justify-center gap-2",
+        className
+      )}
     >
       <Input
         {...register("email")}
@@ -35,6 +41,7 @@ const WaitlistForm: FC<WaitlistFormProps> = ({}) => {
         type="email"
         disabled={isSubmitting}
         placeholder="Enter your Email"
+        className="min-w-xl"
         required
       />
       {errors?.email ? (

@@ -1,3 +1,5 @@
+import { Icon } from "@/app/_components/miscellaneous/icons";
+
 export const solutionData = [
   {
     title: "All-in-one platform",
@@ -18,5 +20,47 @@ export const solutionData = [
   {
     title: "AI personalization",
     src: "https://ska5e2m64t.ufs.sh/f/dVNuXjG3uMtOFkoLVy2EjKGaLP6OlqZ2Dt5xkAMYS0dQzUbC",
+  },
+];
+
+export const keyBenefitsSection: {
+  title: string;
+  description: string;
+  icon: Icon;
+}[] = [
+  {
+    title: "Exclusive Sneak Peeks",
+    description:
+      "Early access to new features and course tools before public release.",
+    icon: "ExclusiveOffers",
+  },
+  {
+    title: "Priority Support",
+    description:
+      "Dedicated onboarding help and direct access to our product team.",
+    icon: "PrioretySupport",
+  },
+  {
+    title: "Special Discounts",
+    description:
+      "Launch-only pricing and special offers available just for early users.",
+    icon: "SpecialDiscounts",
+  },
+  {
+    title: "Influence Product Development",
+    description: "Your feedback helps shape features and improvements.",
+    icon: "InfluecePD",
+  },
+  {
+    title: "Community Access",
+    description:
+      "Join a private early user community, network, and collaborate with peers.",
+    icon: "CommunityAccess",
+  },
+  {
+    title: "Early Content Access",
+    description:
+      "Unlock premium courses and learning materials ahead of everyone else.",
+    icon: "EarlyContentAccess",
   },
 ];
