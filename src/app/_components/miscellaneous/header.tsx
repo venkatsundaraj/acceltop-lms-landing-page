@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FC } from "react";
 import { buttonVariants } from "@/app/_components/ui/button";
+import NavigationMenu from "@/app/_components/miscellaneous/navigation-menu";
 
 interface HeaderProps {}
 
@@ -20,10 +21,20 @@ const Header: FC<HeaderProps> = ({}) => {
         >
           AccelTop
         </Link>
+
         <nav className="flex items-center justify-center gap-3">
-          <ul className="flex items-center justify-center gap-6">
-            <li className="text-primary text-subtitle-heading leading-normal tracking-normal font-paragraph font-normal ">
-              <Link href={"/pricing"}>Pricing</Link>
+          <NavigationMenu />
+          <ul className="flex items-center justify-center gap-3">
+            <li className="text-background text-subtitle-heading leading-normal tracking-normal font-paragraph font-normal ">
+              <Link
+                href={"/waitlist"}
+                className={cn(
+                  buttonVariants({ variant: "link" }),
+                  "hover:no-underline text-foreground font-normal leading-normal tracking-normal font-paragraph"
+                )}
+              >
+                Pricing
+              </Link>
             </li>
             <li className="text-background text-subtitle-heading leading-normal tracking-normal font-paragraph font-normal ">
               <Link

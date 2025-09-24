@@ -7,7 +7,8 @@ import {
   EmailValidationSchema,
   emailValidator,
 } from "@/lib/validation/email-validation";
-import { Button } from "../ui/button";
+import { Button } from "@/app/_components/ui/button";
+import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
 interface WaitlistFormProps {
@@ -19,12 +20,30 @@ const WaitlistForm: FC<WaitlistFormProps> = ({ className }) => {
     register,
     formState: { isSubmitting, errors },
     handleSubmit,
+    reset,
   } = useForm<EmailValidationSchema>({
     resolver: zodResolver(emailValidator),
   });
 
-  const submitHandler = function (formData: EmailValidationSchema) {
-    console.log(formData);
+  const submitHandler = async function (formData: EmailValidationSchema) {
+    try {
+      const data = await fetch("/api/waitlist", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log(data);
+
+      if (data) {
+        toast("Your profile has been updated.");
+        return reset();
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <form

@@ -24,7 +24,7 @@ const WaitlistPopupButton: FC<WaitlistPopupButtonProps> = ({}) => {
       >
         Join
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="min-w-fit">
         <DialogHeader>
           <DialogTitle className="!text-primary font-heading font-light text-tertiary-heading leading-normal tracking-normal text-center">
             Join Waitlist

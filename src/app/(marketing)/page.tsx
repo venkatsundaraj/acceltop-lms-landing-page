@@ -22,7 +22,7 @@ export default function Home() {
           </p>
           <div className="flex items-center justify-center gap-8 mt-4">
             <Link
-              href={"/"}
+              href={"/waitlist"}
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
                 "min-w-[145px]"
