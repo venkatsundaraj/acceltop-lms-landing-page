@@ -13,7 +13,7 @@ const layout: FC<layoutProps> = ({ children }) => {
     <main className="w-screen min-h-screen flex flex-col items-start justify-center">
       <Header />
       <Toaster />
-      <ScrollToHash />
+
       {children}
       <Footer />
     </main>

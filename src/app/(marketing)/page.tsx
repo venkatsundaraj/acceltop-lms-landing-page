@@ -1,16 +1,20 @@
-import Image from "next/image";
 import { Icons } from "@/app/_components/miscellaneous/icons";
-import { Button, buttonVariants } from "@/app/_components/ui/button";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { ScrollToHash } from "@/app/_components/miscellaneous/scroll-to-hash";
+import WaitlistForm from "@/app/_components/miscellaneous/waitlist-form";
 import WaitlistPopupButton from "@/app/_components/miscellaneous/waitlist-popup-button";
+import { buttonVariants } from "@/app/_components/ui/button";
 import { keyBenefitsSection, solutionData } from "@/config/marketing";
-import KeyBenefitsSection from "../_components/miscellaneous/key-benefits-section";
-import WaitlistForm from "../_components/miscellaneous/waitlist-form";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
+import { Suspense } from "react";
 
-export default function Home() {
+export default function Home({}: {}) {
   return (
     <>
+      <Suspense fallback={null}>
+        <ScrollToHash />
+      </Suspense>
       <section className="w-full min-h-screen flex items-center justify-center py-24 bg-grid relative overflow-hidden">
         <div className="container flex flex-col items-center justify-center gap-2 z-10">
           <h1 className="text-primary-heading font-heading leading-tight tracking-normal text-primary font-normal max-w-prose">
@@ -30,6 +34,7 @@ export default function Home() {
             >
               Explore
             </Link>
+
             <WaitlistPopupButton />
           </div>
         </div>
@@ -114,7 +119,8 @@ export default function Home() {
           <p className="text-paragraph-heading w-full font-paragraph leading-normal tracking-normal text-foreground/70 max-w-prose text-center">
             Sign up today for updates and a first look at what's coming.
           </p>
-          <WaitlistForm className="mt-6 " />
+
+          <WaitlistForm />
         </div>
       </section>
     </>

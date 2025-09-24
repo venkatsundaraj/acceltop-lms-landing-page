@@ -1,5 +1,5 @@
 "use client";
-import { FC } from "react";
+import { FC, use } from "react";
 import { Input } from "@/app/_components/ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,11 +11,9 @@ import { Button } from "@/app/_components/ui/button";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
-interface WaitlistFormProps {
-  className?: string;
-}
+interface WaitlistFormProps {}
 
-const WaitlistForm: FC<WaitlistFormProps> = ({ className }) => {
+const WaitlistForm: FC<WaitlistFormProps> = ({}) => {
   const {
     register,
     formState: { isSubmitting, errors },
@@ -48,10 +46,7 @@ const WaitlistForm: FC<WaitlistFormProps> = ({ className }) => {
   return (
     <form
       onSubmit={handleSubmit(submitHandler)}
-      className={cn(
-        "flex flex-col items-center justify-center gap-2",
-        className
-      )}
+      className={cn("flex flex-col items-center justify-center gap-2")}
     >
       <Input
         {...register("email")}

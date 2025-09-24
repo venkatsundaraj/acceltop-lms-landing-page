@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Suspense } from "react";
 import {
   Dialog,
   DialogContent,
@@ -30,6 +30,7 @@ const WaitlistPopupButton: FC<WaitlistPopupButtonProps> = ({}) => {
             Join Waitlist
           </DialogTitle>
         </DialogHeader>
+
         <WaitlistForm />
       </DialogContent>
     </Dialog>

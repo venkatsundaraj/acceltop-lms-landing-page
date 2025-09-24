@@ -1,9 +1,13 @@
-import WaitlistForm from "@/app/_components/miscellaneous/waitlist-form";
 import { FC } from "react";
+import { Suspense } from "react";
+import WaitlistForm from "@/app/_components/miscellaneous/waitlist-form";
+import SearchParamsHandler from "@/app/_components/miscellaneous/search-params-handler";
 
-interface pageProps {}
+interface pageProps {
+  searchParams: Promise<{ q?: string }>;
+}
 
-const page: FC<pageProps> = ({}) => {
+const page: FC<pageProps> = ({ searchParams }) => {
   return (
     <section className="w-full flex items-center justify-center py-24 bg-grid relative overflow-hidden min-h-screen">
       <div className="container flex flex-col items-center justify-center gap-8 h-full">
@@ -21,7 +25,8 @@ const page: FC<pageProps> = ({}) => {
         <p className="text-paragraph-heading w-full font-paragraph leading-normal tracking-normal text-foreground/70 max-w-prose text-center">
           Sign up today for updates and a first look at what's coming.
         </p>
-        <WaitlistForm className="mt-6 " />
+
+        <WaitlistForm />
       </div>
     </section>
   );
