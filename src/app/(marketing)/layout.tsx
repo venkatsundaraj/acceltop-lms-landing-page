@@ -10,7 +10,7 @@ interface layoutProps {
 
 const layout: FC<layoutProps> = ({ children }) => {
   return (
-    <main className="w-screen min-h-screen flex flex-col items-start justify-center">
+    <main className="w-screen min-h-screen flex flex-col items-start justify-center overflow-x-hidden">
       <Header />
       <Toaster />
 

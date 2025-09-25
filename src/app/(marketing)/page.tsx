@@ -15,9 +15,9 @@ export default function Home({}: {}) {
       <Suspense fallback={null}>
         <ScrollToHash />
       </Suspense>
-      <section className="w-full min-h-screen flex items-center justify-center py-24 bg-grid relative overflow-hidden">
+      <section className="w-full min-h-screen flex items-center justify-center py-24 bg-grid relative overflow-y-hidden overflow-x-hidden">
         <div className="container flex flex-col items-center justify-center gap-2 z-10">
-          <h1 className="text-primary-heading font-heading leading-tight tracking-normal text-primary font-normal max-w-prose">
+          <h1 className="text-primary-heading text-center font-heading leading-tight tracking-normal text-primary font-normal max-w-prose">
             Transform How You Teach and Learn
           </h1>
           <p className="text-subtitle-heading font-paragraph leading-normal tracking-normal text-sidebar-ring font-semibold max-w-xl text-center">
@@ -39,9 +39,9 @@ export default function Home({}: {}) {
           </div>
         </div>
         <div className="absolute w-full h-full">
-          <Icons.BgConicalFlask className="w-24 absolute top-1/6 left-[20px] fill-primary/40 " />
+          <Icons.BgConicalFlask className="w-24 hidden md:block absolute top-1/6 left-[20px] fill-primary/40 " />
           <Icons.BgGrpah className="w-24 absolute -top-[120px] left-2/3 fill-primary/40 rotate-12" />
-          <Icons.BgGraduation className="w-24 absolute top-2/6 right-0 fill-primary/60" />
+          <Icons.BgGraduation className="w-24 hidden md:block absolute top-2/6 right-0 fill-primary/60" />
           <Icons.BgPen className="w-24 absolute top-4/6 left-4/5 fill-primary/60 animate-pulse" />
           <Icons.BgBook className="w-24 absolute top-1/6 left-1/12 fill-primary/60 animate-pulse" />
           <Icons.BgPieChart className="w-24 absolute top-8/12 left-2/5 fill-primary/60 animate-pulse" />
@@ -56,7 +56,7 @@ export default function Home({}: {}) {
             {Array.from(solutionData).map((item, i) => (
               <li
                 key={i}
-                className="items-center flex-col flex justify-center gap-2.5 p-3 md:p-6 bg-background rounded-sm min-h-[320px] max-w-[300px] md:max-w-[340px] w-full lg:max-w-[400px]"
+                className="items-center flex-col flex justify-center gap-2.5 p-3 md:p-6 bg-background rounded-sm min-h-[320px] max-w-full md:max-w-[340px] w-full lg:max-w-[400px]"
               >
                 <Image
                   className="w-full"
@@ -74,10 +74,10 @@ export default function Home({}: {}) {
         </div>
       </section>
       <section className="w-full flex items-center justify-center py-8 bg-grid relative h-[unset] flex-col gap-16 px-3">
-        <h2 className="text-secondary-heading font-heading leading-tight tracking-normal text-primary font-normal max-w-prose">
+        <h2 className="text-secondary-heading text-center font-heading leading-tight tracking-normal text-primary font-normal max-w-prose">
           Why Join Our Early Access Waitlist?
         </h2>
-        <ul className="h-[340px] md:min-h-screen w-full flex flex-wrap md:flex-nowrap items-start justify-center gap-3 ">
+        <ul className="md:min-h-screen w-full flex flex-wrap md:flex-nowrap items-start justify-center gap-3 ">
           {Array.from(keyBenefitsSection).map((item, i) => {
             const Icon = Icons[item.icon];
             return (
@@ -85,12 +85,12 @@ export default function Home({}: {}) {
                 key={i}
                 className="flex  w-full flex-col items-start gap-8 justify-center"
               >
-                <div className="md:h-screen md:max-h-screen bg-primary w-full flex flex-col items-center rounded-sm justify-between p-4">
+                <div className="md:h-screen md:max-h-screen bg-primary w-full flex flex-col items-center rounded-sm justify-between p-4 gap-3">
                   <div className="w-full flex items-center justify-center max-h-[75%] h-[75%] bg-background bg-grid rounded-sm p-4 ">
-                    <Icon className="w-[70%] fill-primary stroke-1 " />
+                    <Icon className="w-[50%] md:w-[70%] fill-primary stroke-1 " />
                   </div>
                   <div className="w-full flex items-center justify-end">
-                    <span className="text-4xl md:text-5xl lg:text-7xl xl:text-[152px] text-background font-heading text-center ">
+                    <span className="text-7xl md:text-5xl lg:text-7xl xl:text-[152px] text-background font-heading text-center ">
                       {i + 1}
                     </span>
                   </div>

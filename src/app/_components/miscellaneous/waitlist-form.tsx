@@ -55,7 +55,7 @@ const WaitlistForm: FC<WaitlistFormProps> = ({}) => {
         type="email"
         disabled={isSubmitting}
         placeholder="Enter your Email"
-        className="min-w-xl"
+        className="min-w-sm md:min-w-xl"
         required
       />
       {errors?.email ? (

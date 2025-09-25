@@ -1,6 +1,8 @@
-import { LucideProps } from "lucide-react";
+import { LucideProps, CircleX, Menu } from "lucide-react";
 
 export const Icons = {
+  CircleX,
+  Menu,
   Twitter: (props: LucideProps) => (
     <svg
       {...props}
@@ -306,8 +308,6 @@ export const Icons = {
       x="0px"
       y="0px"
       viewBox="0 0 509.152 509.152"
-      width="512"
-      height="512"
     >
       <g>
         <path

@@ -5,14 +5,17 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/app/_components/ui/menubar";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FC } from "react";
 
-interface NavigationMenuProps {}
+interface NavigationMenuProps {
+  className?: string;
+}
 
-const NavigationMenu: FC<NavigationMenuProps> = ({}) => {
+const NavigationMenu: FC<NavigationMenuProps> = ({ className }) => {
   return (
-    <Menubar className="bg-transparent border-none gap-3">
+    <Menubar className={cn("bg-transparent border-none gap-3", className)}>
       <MenubarMenu>
         <MenubarTrigger className="font-normal font-paragraph text-foreground text-[15px] leading-normal tracking-normal">
           Products
