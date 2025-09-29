@@ -15,7 +15,59 @@ interface NavigationMenuProps {
 
 const NavigationMenu: FC<NavigationMenuProps> = ({ className }) => {
   return (
-    <Menubar className={cn("bg-transparent border-none gap-3", className)}>
+    <Menubar
+      className={cn("bg-transparent border-none gap-1 md:gap-3", className)}
+    >
+      <MenubarMenu>
+        <MenubarTrigger className="font-normal font-paragraph text-foreground text-[15px] leading-normal tracking-normal">
+          Products
+        </MenubarTrigger>
+        <MenubarContent className="border-primary" side="bottom" align="end">
+          <MenubarItem asChild className="p-0">
+            <Link
+              href={"https://acceltop-lms.vercel.app/"}
+              target="_blank"
+              className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal cursor-pointer"
+            >
+              <span className="hover:bg-[#3c96b4] hover:text-background w-full h-full p-1.5 rounded-sm">
+                Kornea
+              </span>
+            </Link>
+          </MenubarItem>
+
+          <MenubarItem asChild className="p-0">
+            <Link
+              href={"https://orthomentors.ai/"}
+              target="_blank"
+              className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal cursor-pointer"
+            >
+              <span className="hover:bg-[#2563eb] hover:text-background w-full h-full p-1.5 rounded-sm">
+                Orthomentors
+              </span>
+            </Link>
+          </MenubarItem>
+          <MenubarItem asChild className="p-0">
+            <Link
+              href={"/waitlist"}
+              className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal cursor-pointer"
+            >
+              <span className="hover:bg-[#fb8500] hover:text-background w-full h-full p-1.5 rounded-sm">
+                SkillsPaedia
+              </span>
+            </Link>
+          </MenubarItem>
+          <MenubarItem asChild className="p-0">
+            <Link
+              href={"/waitlist"}
+              className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal cursor-pointer"
+            >
+              <span className="hover:bg-[#00b4d8] hover:text-background w-full h-full p-1.5 rounded-sm">
+                AccelTop NXT
+              </span>
+            </Link>
+          </MenubarItem>
+        </MenubarContent>
+      </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger className="font-normal font-paragraph text-foreground text-[15px] leading-normal tracking-normal">
           Products
@@ -26,7 +78,7 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ className }) => {
               href={"/waitlist"}
               className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal"
             >
-              Kornea
+              Online Courses
             </Link>
           </MenubarItem>
           <MenubarItem asChild>
@@ -34,7 +86,7 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ className }) => {
               href={"/waitlist"}
               className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal"
             >
-              Orthomentors
+              Mock Test
             </Link>
           </MenubarItem>
           <MenubarItem asChild>
@@ -42,7 +94,7 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ className }) => {
               href={"/waitlist"}
               className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal"
             >
-              SkillsPaedia
+              Branded Website
             </Link>
           </MenubarItem>
           <MenubarItem asChild>
@@ -50,14 +102,30 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ className }) => {
               href={"/waitlist"}
               className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal"
             >
-              AccelTop NXT
+              Question Bank
+            </Link>
+          </MenubarItem>
+          <MenubarItem asChild>
+            <Link
+              href={"/waitlist"}
+              className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal"
+            >
+              Flash Cards
+            </Link>
+          </MenubarItem>
+          <MenubarItem asChild>
+            <Link
+              href={"/waitlist"}
+              className="text-foreground font-paragraph text-[14px] font-normal leading-normal tracking-normal"
+            >
+              MCQs
             </Link>
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger className="font-normal font-paragraph text-foreground text-[15px] leading-normal tracking-normal">
-          Modules
+          Solutions
         </MenubarTrigger>
         <MenubarContent className="border-primary" side="bottom" align="end">
           <MenubarItem asChild>

@@ -17,8 +17,9 @@ export default function Home({}: {}) {
       </Suspense>
       <section className="w-full min-h-screen flex items-center justify-center py-24 bg-grid relative overflow-y-hidden overflow-x-hidden">
         <div className="container flex flex-col items-center justify-center gap-2 z-10">
-          <h1 className="text-primary-heading text-center font-heading leading-tight tracking-normal text-primary font-normal max-w-prose">
-            Transform How You Teach and Learn
+          <h1 className="text-primary-heading text-center font-heading leading-tight tracking-normal text-primary font-semibold max-w-prose">
+            Transform
+            <br /> How You Teach and Learn
           </h1>
           <p className="text-subtitle-heading font-paragraph leading-normal tracking-normal text-sidebar-ring font-semibold max-w-xl text-center">
             Discover new courses, connect with mentors, and start your learning
@@ -77,7 +78,7 @@ export default function Home({}: {}) {
         <h2 className="text-secondary-heading text-center font-heading leading-tight tracking-normal text-primary font-normal max-w-prose">
           Why Join Our Early Access Waitlist?
         </h2>
-        <ul className="md:min-h-screen w-full flex flex-wrap md:flex-nowrap items-start justify-center gap-3 ">
+        <ul className="w-full flex flex-wrap md:flex-nowrap items-start justify-center gap-3 ">
           {Array.from(keyBenefitsSection).map((item, i) => {
             const Icon = Icons[item.icon];
             return (
@@ -85,8 +86,8 @@ export default function Home({}: {}) {
                 key={i}
                 className="flex  w-full flex-col items-start gap-8 justify-center"
               >
-                <div className="md:h-screen md:max-h-screen bg-primary w-full flex flex-col items-center rounded-sm justify-between p-4 gap-3">
-                  <div className="w-full flex items-center justify-center max-h-[75%] h-[75%] bg-background bg-grid rounded-sm p-4 ">
+                <div className="bg-primary w-full flex flex-col items-center rounded-sm justify-between p-4 gap-3">
+                  <div className="w-full flex items-center justify-center max-h-[35%] h-[35%] bg-background bg-grid rounded-sm p-4 ">
                     <Icon className="w-[50%] md:w-[70%] fill-primary stroke-1 " />
                   </div>
                   <div className="w-full flex items-center justify-end">
